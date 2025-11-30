@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Elegant — Professional Single Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#ffffff;--muted:#6b7280;--accent:#0b63ff;--card:#f8fafc}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{background:linear-gradient(180deg,#fbfdff 0%,#ffffff 60%);color:#0f172a;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1100px;margin:48px auto;padding:32px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;margin-top:40px}
+    .eyebrow{display:inline-block;padding:6px 10px;background:var(--card);border-radius:999px;color:var(--accent);font-weight:700;font-size:12px}
+    h1{font-size:36px;margin:16px 0 10px;line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 22px}
+    .cta{display:inline-flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 6px 20px rgba(11,99,255,0.12)}
+    .ghost{padding:10px 14px;border-radius:10px;border:1px solid #e6eefc;color:var(--accent);text-decoration:none;font-weight:600}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 30px rgba(11,99,255,0.04)}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+    .feature h3{margin:8px 0 6px;font-size:16px}
+    .feature p{color:var(--muted);margin:0;font-size:14px}
+    footer{margin-top:48px;border-top:1px solid #eef2f7;padding-top:20px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:1fr 1fr}.wrap{padding:18px}}
+    @media (max-width:560px){.features{grid-template-columns:1fr}.logo{width:40px;height:40px}.brand span{display:none}.hero{gap:20px}.eyebrow{font-size:11px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">ES</div>
+        <div>
+          <div style="font-weight:700">Emirates Sun Workshop</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Forklift • Generators • 26 years of service</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Trusted since 1999</div>
+        <h1>Reliable workshop services for heavy equipment in the UAE</h1>
+        <p class="lead">Specialising in forklift maintenance, diesel generator repairs and preventive servicing for major industrial clients across the Emirates.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Book a service</a>
+          <a class="ghost" href="#about">Learn more</a>
+        </div>
+
+        <div class="features" style="margin-top:28px">
+          <div class="feature card">
+            <strong>On-site Repair</strong>
+            <h3>Rapid field response</h3>
+            <p>Technicians dispatched across UAE with full diagnostic kits and genuine parts.</p>
+          </div>
+          <div class="feature card">
+            <strong>Preventive Maintenance</strong>
+            <h3>Reduce downtime</h3>
+            <p>Scheduled services and tailored maintenance plans to extend equipment life.</p>
+          </div>
+          <div class="feature card">
+            <strong>Major Overhauls</strong>
+            <h3>Factory-grade refurbishment</h3>
+            <p>Complete engine and electrical overhauls with warranty options.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card" style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:13px;color:var(--muted)">Request estimate</div>
+        <div style="font-weight:700;font-size:20px">Get a free site visit</div>
+        <form id="contact" style="display:flex;flex-direction:column;gap:10px" onsubmit="event.preventDefault();alert('Thanks — we\'ll contact you soon!')">
+          <input placeholder="Name" required style="padding:10px;border-radius:10px;border:1px solid #e6eefc">
+          <input placeholder="Phone or Email" required style="padding:10px;border-radius:10px;border:1px solid #e6eefc">
+          <textarea placeholder="Brief description" rows="3" style="padding:10px;border-radius:10px;border:1px solid #e6eefc"></textarea>
+          <button class="btn" type="submit">Request visit</button>
+        </form>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px">Or call us: +971 4 000 0000</div>
+      </aside>
+    </section>
+
+    <section id="about" style="margin-top:36px;display:flex;gap:18px;align-items:center">
+      <div style="flex:1">
+        <h2 style="margin:0 0 8px">About Emirates Sun Workshop</h2>
+        <p style="color:var(--muted);margin:0">Serving the UAE since 1999, we partner with logistics and industrial clients to keep their fleets and power systems running. Our experience with major installations and preventive strategies reduces operational risk and lowers total cost of ownership.</p>
+      </div>
+      <div style="width:160px;text-align:right;color:var(--muted)">
+        <div style="font-weight:700;font-size:18px">26+</div>
+        <div style="font-size:12px">Years in service</div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div style="font-weight:700">Emirates Sun Workshop</div>
+        <div style="font-size:13px;color:var(--muted)">Industrial maintenance • UAE</div>
+      </div>
+      <div style="font-size:13px;color:var(--muted)">© 1999–2025 • All rights reserved</div>
+    </footer>
+  </div>
+</body>
+</html>
